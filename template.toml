@@ -1,0 +1,14 @@
+[agent]
+version = ""
+name = ""                       # Default name all agent instances will receive
+type = ""                       # Uniguqe agent identifier
+goal = ""
+icon = ""
+
+[[capabilities]]
+type = ""                       # identifies the capability
+
+[capabilities.config_default]   # sets the default values for each config property
+config_name = "default value"
+
+
