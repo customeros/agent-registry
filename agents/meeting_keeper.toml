@@ -1,0 +1,25 @@
+[agent]
+version = "1.0"
+name = "Meeting keeper"          
+type = "meeting_keeper"          
+goal = "capture_meeting_intelligence"
+icon = "notebook-pen"
+
+[[capabilities]]
+type = "detect_new_meeting_recording"        
+
+[capabilities.config_default]  
+notetaker = ""
+
+[[capabilities]]
+type = "extract_meeting_highlights"        
+
+[capabilities.config_default]  
+highlight_types = ["key_point", "decisions", "action_items", "follow_ups"]
+
+[[capabilities]]
+type = "identify_meeting_participants"        
+
+[[capabilities]]
+type = "create_timeline_entry"        
+
