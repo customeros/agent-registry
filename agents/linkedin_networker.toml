@@ -1,0 +1,26 @@
+[agent]
+version = "1.0"
+name = "LinkedIn networker"          
+type = "linkedin_networker"          
+goal = "grow_linkedin_audience"
+icon = ""
+
+[[capabilities]]
+type = "sync_connections"        
+
+[capabilities.config_default]  
+browser_extension_enabled = false
+
+[[capabilities]]
+type = "send_connection_requests"        
+
+[capabilities.config_default]  
+with_message = false
+message = ""
+
+[[capabilities]]
+type = "send_linkedin_message"        
+
+[capabilities.config_default]  
+message = ""
+
