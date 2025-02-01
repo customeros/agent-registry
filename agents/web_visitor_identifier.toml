@@ -2,11 +2,11 @@
 version = "1.0"
 name = "Web visitor identifier"          
 type = "web_visitor_identifier"          
-goal = "identify_website_visitor"
+goal = "identify_web_visitor"
 icon = "radar"
 
 [[capabilities]]
-type = "identify_website_visitor"        
+type = "identify_web_visitor"        
 
 [capabilities.config_default]  
 websites_to_track = []
