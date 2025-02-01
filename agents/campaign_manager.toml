@@ -1,0 +1,57 @@
+[agent]
+version = "1.0"
+name = "Campaign manager"          
+type = "campaign_manager"          
+goal = ""                   # user selected from dropdown: signups, replies, etc
+icon = ""
+
+[[capabilities]]
+type = "build_campaign_list"        
+
+[capabilities.config_default]  
+audience_filters = ""
+
+[[capabilities]]
+type = "enrich_email_addresses"        
+
+[capabilities.config_default]  
+isActive = true
+
+[[capabilities]]
+type = "validate_email_address_deliverability"        
+
+[[capabilities]]
+type = "select_optimal_sending_mailbox"
+
+[capabilities.config_default]  
+senders = []
+
+[[capabilities]]
+type = "schedule_sends"        
+
+[capabilities.config_default]  
+send_window_start = "09:00"
+send_window_end = "18:00"
+
+[[capabilities]]
+type = "track_campaign_engagement"        
+
+[capabilities.config_default]  
+track_clicks = true
+track_replies = true
+
+[[capabilities]]
+type = "manage_bounces"
+
+[[capabilities]]
+type = "handle_autoresponder"
+
+[capabilities.config_default]  
+retry_in_days = 10
+
+[[capabilities]]
+type = "forward_replies"
+
+[capabilities.config_default]  
+isActive = false
+forward_to = ""
