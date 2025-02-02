@@ -17,7 +17,8 @@ type = "monitor_support_pages"
 support_pages = ["*/support/*"]
 
 [[capabilities]]
-type = "tag_company"                    
+type = "apply_tag"                    
 
 [[capabilities.config_default]]
 tag_name = "Support"             
+tag_entity = "Company"

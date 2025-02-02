@@ -26,5 +26,5 @@ highlight_types = ["key_point", "decisions", "action_items", "follow_ups"]
 type = "identify_meeting_participants"        
 
 [[capabilities]]
-type = "create_timeline_entry"        
+type = "create_markdown_timeline_event"        
 

@@ -11,14 +11,14 @@ events = [
 ]
 
 [[capabilities]]
-type = "sync_connections"        
+type = "sync_linkedin_connections"        
 
 [capabilities.config_default]  
 browser_extension_enabled = false
 sync_frequency = "daily"
 
 [[capabilities]]
-type = "send_connection_requests"        
+type = "send_linkedin_connection_request"        
 
 [capabilities.config_default]  
 with_message = false

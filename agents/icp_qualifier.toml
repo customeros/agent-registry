@@ -11,7 +11,7 @@ events = [
 ]
 
 [[capabilities]]
-type = "detect_new_leads"        
+type = "detect_new_lead"        
 
 [[capabilities]]
 type = "gather_company_intelligence"        

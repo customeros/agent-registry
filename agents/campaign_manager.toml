@@ -17,7 +17,7 @@ type = "build_campaign_list"
 audience_filters = ""
 
 [[capabilities]]
-type = "enrich_email_addresses"        
+type = "enrich_email_address"        
 
 [capabilities.config_default]  
 isActive = true
@@ -32,7 +32,7 @@ type = "select_optimal_sending_mailbox"
 senders = []
 
 [[capabilities]]
-type = "schedule_sends"        
+type = "schedule_email_delivery"        
 
 [capabilities.config_default]  
 send_window_start = "09:00"
@@ -46,7 +46,7 @@ track_clicks = true
 track_replies = true
 
 [[capabilities]]
-type = "manage_bounces"
+type = "manage_bounced_email"
 
 [[capabilities]]
 type = "handle_autoresponder"
@@ -55,7 +55,7 @@ type = "handle_autoresponder"
 retry_in_days = 10
 
 [[capabilities]]
-type = "forward_replies"
+type = "forward_email_reply"
 
 [capabilities.config_default]  
 isActive = false
