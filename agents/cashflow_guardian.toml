@@ -11,7 +11,7 @@ events = [
 ]
 
 [[capabilities]]
-type = "generate_invoices"        
+type = "generate_invoice"        
 
 [capabilities.config_default]  
 logo = ""
@@ -23,7 +23,7 @@ invoice_numbering = "random"
 bank_account_details = ""
 
 [[capabilities]]
-type = "send_invoices"        
+type = "send_invoice"        
 
 [capabilities.config_default]  
 from_email_address = ""
@@ -31,7 +31,7 @@ bcc_email_address = ""
 email_message = ""
 
 [[capabilities]]
-type = "collect_payments"
+type = "collect_payment"
 
 [capabilities.config_default]  
 payment_provider = "stripe"
@@ -49,11 +49,11 @@ type = "monitor_accounts_receivable"
 alert_threshold_days = 30
 
 [[capabilities]]
-type = "send_payment_reminders"        
+type = "send_payment_reminder"        
 
 [capabilities.config_default]  
 reminder_schedule_in_days = [7, 14, 30, 45, 60, 90] 
 reminder_message = "Payment for invoice {invoice_number} is {days_overdue} days overdue"
 
 [[capabilities]]
-type = "process_refunds"        
+type = "process_refund"        
