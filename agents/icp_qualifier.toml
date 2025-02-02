@@ -5,6 +5,11 @@ type = "icp_qualifier"
 goal = "evaluate_icp_fit"
 icon = "target"
 
+[triggers]
+events = [
+    "company.stage.lead"
+]
+
 [[capabilities]]
 type = "detect_new_leads"        
 

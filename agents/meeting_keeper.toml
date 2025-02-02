@@ -5,6 +5,11 @@ type = "meeting_keeper"
 goal = "capture_meeting_intelligence"
 icon = "notebook-pen"
 
+[triggers]
+events = [
+    "meeting_recording.created"
+]
+
 [[capabilities]]
 type = "detect_new_meeting_recording"        
 
