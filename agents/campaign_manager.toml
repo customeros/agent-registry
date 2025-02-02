@@ -5,6 +5,11 @@ type = "campaign_manager"
 goal = ""                   # user selected from dropdown: signups, replies, etc
 icon = ""
 
+[triggers]
+events = [
+    "contact.sent_to_agent.campaign_manager"
+]
+
 [[capabilities]]
 type = "build_campaign_list"        
 

@@ -5,6 +5,11 @@ type = "web_visitor_identifier"
 goal = "identify_web_visitor"
 icon = "radar"
 
+[triggers]
+events = [
+    "web_session.created"
+]
+
 [[capabilities]]
 type = "identify_web_visitor"        
 

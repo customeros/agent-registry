@@ -5,6 +5,11 @@ type = "cashflow_guardian"
 goal = "collect_owed_cash"
 icon = "shield-dollar"
 
+[triggers]
+events = [
+    "invoice.start"
+]
+
 [[capabilities]]
 type = "generate_invoices"        
 

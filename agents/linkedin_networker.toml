@@ -5,11 +5,17 @@ type = "linkedin_networker"
 goal = "grow_linkedin_audience"
 icon = ""
 
+[triggers]
+events = [
+    "contact.sent_to_agent.linkedin_networker"
+]
+
 [[capabilities]]
 type = "sync_connections"        
 
 [capabilities.config_default]  
 browser_extension_enabled = false
+sync_frequency = "daily"
 
 [[capabilities]]
 type = "send_connection_requests"        

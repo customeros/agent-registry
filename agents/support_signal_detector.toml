@@ -5,6 +5,11 @@ type = "support_signal_detector"
 goal = "detect_support_signal"
 icon = "life-buoy-01"
 
+[triggers]
+events = [
+    "web_session.ready_for_analysis"
+]
+
 [[capabilities]]
 type = "monitor_support_pages"        
 
