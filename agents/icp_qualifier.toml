@@ -8,25 +8,12 @@ icon = "target"
 [triggers]
 events = [
     "company.stage.lead"
+] 
+
+[capabilities]
+types = [
+    "detect_new_lead",
+    "gather_company_intelligence",        
+    "evaluate_company_icp_fit",
+    "update_company_status" 
 ]
-
-[[capabilities]]
-type = "detect_new_lead"        
-
-[[capabilities]]
-type = "gather_company_intelligence"        
-
-[[capabilities]]
-type = "evaluate_company_icp_fit"        
-
-[capabilities.config_default]  
-reference_icp_fit_companies = []
-disqualification_criteria = ""
-
-[[capabilities]]
-type = "update_company_status"                    
-
-[[capabilities.config_default]]
-icp_fit_company_relationship = "prospect"
-icp_fit_company_stage = "target"
-not_a_fit_company_relationship = "not a fit"
