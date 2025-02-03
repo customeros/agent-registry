@@ -1,0 +1,63 @@
+[agent]
+version = "1.0"
+name = "Cashflow Guardian"          
+type = "cashflow_guardian"          
+goal = "collect_owed_cash"
+icon = "shield-dollar"
+
+[triggers]
+events = [
+    "invoice.start"
+]
+
+[[capabilities]]
+type = "prepare_invoice_line_items"
+
+[[capabilities]]
+type = "generate_invoice"        
+
+# [capabilities.config_default]  
+# logo = ""
+# company_legal_name = ""
+# base_currency = ""
+# billing_address = ""
+# vat_number = ""
+# invoice_numbering = "random"
+# bank_account_details = ""
+# webhook_url = ""
+
+[[capabilities]]
+type = "send_invoice"        
+
+# [capabilities.config_default]  
+# from_email_address = ""
+# bcc_email_address = ""
+# email_message = ""
+
+[[capabilities]]
+type = "collect_payment"
+
+# [capabilities.config_default]  
+# payment_provider = "stripe"
+
+[[capabilities]]
+type = "sync_with_accounting_system"        
+
+# [capabilities.config_default]  
+# accounting_system = "quickbooks"
+
+[[capabilities]]
+type = "monitor_accounts_receivable"        
+
+# [capabilities.config_default]  
+# alert_threshold_days = 30
+
+[[capabilities]]
+type = "send_payment_reminder"        
+
+# [capabilities.config_default]  
+# reminder_schedule_in_days = [7, 14, 30, 45, 60, 90] 
+# reminder_message = "Payment for invoice {invoice_number} is {days_overdue} days overdue"
+
+[[capabilities]]
+type = "process_refund"        
