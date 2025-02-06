@@ -19,15 +19,15 @@ events = [
 [capabilities]
 types = [
     "identify_web_visitor",
-    "run_icp_qualifier_agent",
-    "analyze_web_session_for_intent", 
+    "create_and_enrich_company",
+    "analyze_web_session_for_intent",
     "send_web_visitor_slack_notification" 
 ]
 
 [plays]
 "new_web_session" = [
     "identify_web_visitor",
-    "run_icp_qualifier_agent",
+    "create_and_enrich_company",
     "analyze_web_session_for_intent", 
     "send_web_visitor_slack_notification" 
 ]
