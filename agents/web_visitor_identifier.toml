@@ -17,7 +17,7 @@ events = [
 ]
 
 [capabilities]
-type = [
+types = [
     "identify_web_visitor",
     "run_icp_qualifier_agent",
     "analyze_web_session_for_intent", 
