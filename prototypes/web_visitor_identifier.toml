@@ -1,0 +1,31 @@
+[agent]
+version = "1.0"
+name = "Web visitor identifier"          
+type = "web_visitor_identifier"          
+goal = "identify_web_visitor"
+icon = "radar"
+
+[triggers]
+events = [
+    "web_session.created"
+]
+
+[[capabilities]]
+type = "identify_web_visitor"        
+
+[capabilities.config_default]  
+websites_to_track = []
+
+[[capabilities]]
+type = "create_and_enrich_company"                    
+
+[[capabilities]]
+type = "analyze_web_session_for_intent"             
+
+[[capabilities]]
+type = "send_web_visitor_slack_notification"         
+
+[capabilities.config_default]  
+slack_channel_id = ""
+notification_cooldown_in_hrs = 12
+
