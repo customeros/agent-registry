@@ -1,18 +1,37 @@
 [agent]
 version = "1.0"
-name = "ICP qualifier"          
+name = "icp qualifier"          
 type = "icp_qualifier"          
-goal = "evaluate_icp_fit"
 icon = "target"
 
-[triggers]
+[goal]
+goal = "evaluate_icp_fit"
+completion_events = [
+    "icp_fit"
+    "icp_not_a_fit"
+]
+
+[watchers]
 events = [
-    "company.stage.lead"
+    "run_icp_qualifier_agent"
+    "new_lead"
 ] 
 
 [capabilities]
 types = [
-    "detect_new_lead",
+    "gather_company_intelligence",        
+    "evaluate_company_icp_fit",
+    "update_company_status" 
+]
+
+[plays]
+"run_icp_qualifier_agent" = [    
+    "gather_company_intelligence",        
+    "evaluate_company_icp_fit",
+    "update_company_status" 
+]
+
+"new_lead" = [    
     "gather_company_intelligence",        
     "evaluate_company_icp_fit",
     "update_company_status" 
