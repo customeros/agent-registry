@@ -2,18 +2,32 @@
 version = "1.0"
 name = "Web visitor identifier"          
 type = "web_visitor_identifier"          
-goal = "identify_web_visitor"
 icon = "radar"
 
-[triggers]
+[goal]
+goal = "identify_web_visitor"
+completion_events = [
+    "web_visitor_identified",
+    "web_visitor_not_identified"
+]
+
+[watchers]
 events = [
-    "web_session.created"
+    "new_web_session"
 ]
 
 [capabilities]
-types = [
+type = [
     "identify_web_visitor",
-    "create_and_enrich_company",
-    "analyze_web_session_for_intent",
-    "send_web_visitor_slack_notification"
+    "run_icp_qualifier_agent",
+    "analyze_web_session_for_intent", 
+    "send_web_visitor_slack_notification" 
+]
+
+[plays]
+"new_web_session" = [
+    "identify_web_visitor",
+    "run_icp_qualifier_agent",
+    "analyze_web_session_for_intent", 
+    "send_web_visitor_slack_notification" 
 ]
