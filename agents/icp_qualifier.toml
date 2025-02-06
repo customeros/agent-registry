@@ -7,13 +7,13 @@ icon = "target"
 [goal]
 goal = "evaluate_icp_fit"
 completion_events = [
-    "icp_fit"
+    "icp_fit",
     "icp_not_a_fit"
 ]
 
 [watchers]
 events = [
-    "run_icp_qualifier_agent"
+    "run_icp_qualifier_agent",
     "new_lead"
 ] 
 
