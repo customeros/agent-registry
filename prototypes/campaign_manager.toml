@@ -2,61 +2,41 @@
 version = "1.0"
 name = "Campaign manager"          
 type = "campaign_manager"          
-goal = ""                   # user selected from dropdown: signups, replies, etc
 icon = ""
 
-[triggers]
-events = [
-    "contact.sent_to_agent.campaign_manager"
+[goal]
+goal = "receive_reply"            
+completion_events = [
+    "email_reply_received",
+    "email_reply_not_received",
+    "email_not_deliverable"
 ]
 
-[[capabilities]]
-type = "build_campaign_list"        
+[listeners]
+events = [
+    "contact_added_to_campaign",
+    "email_bounced"
+]
 
-# [capabilities.config_default]  
-# audience_filters = ""
+[capabilities]
+types = [
+    "enrich_email_address",
+    "validate_email_deliverability",
+    "manage_campaign_execution",
+    "select_optimal_sending_mailbox",
+    "manage_email_delivery_failures",
+    "forward_email_replies"
+]
 
-[[capabilities]]
-type = "enrich_email_address"        
+[plays]
+"contact_added_to_campaign" = [
+    "enrich_email_address",
+    "validate_email_deliverability",
+    "select_optimal_sending_mailbox",
+    "manage_campaign_execution",
+    "forward_email_replies"
+]
 
-# [capabilities.config_default]  
-# isActive = true
-
-[[capabilities]]
-type = "validate_email_address_deliverability"        
-
-[[capabilities]]
-type = "select_optimal_sending_mailbox"
-
-# [capabilities.config_default]  
-# senders = []
-
-[[capabilities]]
-type = "schedule_email_delivery"        
-
-# [capabilities.config_default]  
-# send_window_start = "09:00"
-# send_window_end = "18:00"
-
-[[capabilities]]
-type = "track_campaign_engagement"        
-
-# [capabilities.config_default]  
-# track_clicks = true
-# track_replies = true
-
-[[capabilities]]
-type = "manage_bounced_email"
-
-[[capabilities]]
-type = "handle_autoresponder"
-
-# [capabilities.config_default]  
-# retry_in_days = 10
-
-[[capabilities]]
-type = "forward_email_reply"
-
-# [capabilities.config_default]  
-# isActive = false
-# forward_to = ""
+"email_bounced" = [
+    "manage_email_delivery_failures"
+]
