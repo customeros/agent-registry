@@ -2,21 +2,85 @@
 version = "1.0"
 name = "Cashflow Guardian"          
 type = "cashflow_guardian"          
-goal = "collect_owed_cash"
 icon = "shield-dollar"
 
-[triggers]
-events = [
-    "invoice.start"
+[goal]
+goal = "get_paid"
+completion_events = [
+    "invoice_paid",
+    "invoice_voided"
 ]
 
-[[capabilities]]
-type = "prepare_invoice_line_items"
+[listeners]
+events = [
+    "start_invoice_run_with_autopayment",
+    "start_invoice_run",
+    "send_invoice",
+    "invoice_paid",
+    "invoice_past_due",
+    "invoice_voided",
+    "payment_failed",
+    "payment_processing"
+]
 
-[[capabilities]]
-type = "generate_invoice"        
+[capabilities]
+types = [
+    "generate_invoice", 
+    "send_invoice_via_email",
+    "process_autopayment",
+    "create_payment_link",
+    "send_paid_notification",
+    "send_past_due_notification",
+    "send_invoice_voided_notification",
+    "send_payment_failure_notification",
+    "sync_invoice_to_accounting_system",
+    "void_invoice",
+    "update_invoice_status",
+    "update_invoice_status_in_accounting_system"
+]
 
-# [capabilities.config_default]  
+[plays]
+"start_invoice_run" = [
+    "generate_invoice", 
+    "sync_invoice_to_accounting_system",
+]
+
+"send_invoice" = [
+    "create_payment_link",
+    "send_invoice_via_email"
+]
+
+"start_invoice_run_with_autopayment" = [
+    "generate_invoice", 
+    "sync_invoice_to_accounting_system",
+    "process_autopayment",
+]
+
+"invoice_paid" = [
+    "send_paid_notification",
+    "update_invoice_status",
+    "update_invoice_status_in_accounting_system"
+]
+
+"invoice_past_due" = [
+    "send_past_due_notification"
+]
+
+"invoice_voided" = [
+    "send_invoice_voided_notification",
+    "update_invoice_status_in_accounting_system"
+]
+
+"payment_failed" = [
+    "send_payment_failure_notification"
+]
+
+"payment_processing" = [
+    "update_invoice_status"
+]
+
+
+# [capabilities.generate_invoice_config]  
 # logo = ""
 # company_legal_name = ""
 # base_currency = ""
@@ -26,38 +90,16 @@ type = "generate_invoice"
 # bank_account_details = ""
 # webhook_url = ""
 
-[[capabilities]]
-type = "send_invoice"        
 
-# [capabilities.config_default]  
+# [capabilities.send_invoice_config]  
 # from_email_address = ""
 # bcc_email_address = ""
 # email_message = ""
 
-[[capabilities]]
-type = "collect_payment"
 
-# [capabilities.config_default]  
+# [capabilities.process_autopayment_config]  
 # payment_provider = "stripe"
 
-[[capabilities]]
-type = "sync_with_accounting_system"        
-
-# [capabilities.config_default]  
+# [capabilities.sync_with_accounting_system]  
 # accounting_system = "quickbooks"
 
-[[capabilities]]
-type = "monitor_accounts_receivable"        
-
-# [capabilities.config_default]  
-# alert_threshold_days = 30
-
-[[capabilities]]
-type = "send_payment_reminder"        
-
-# [capabilities.config_default]  
-# reminder_schedule_in_days = [7, 14, 30, 45, 60, 90] 
-# reminder_message = "Payment for invoice {invoice_number} is {days_overdue} days overdue"
-
-[[capabilities]]
-type = "process_refund"        

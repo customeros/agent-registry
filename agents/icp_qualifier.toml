@@ -11,7 +11,7 @@ completion_events = [
     "icp_not_a_fit"
 ]
 
-[watchers]
+[listeners]
 events = [
     "run_icp_qualifier_agent",
     "new_lead"
