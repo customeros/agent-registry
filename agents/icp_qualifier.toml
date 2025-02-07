@@ -2,7 +2,7 @@
 version = "1.0"
 name = "icp qualifier"          
 type = "icp_qualifier"          
-icon = "target"
+icon = "target-04"
 
 [goal]
 goal = "evaluate_icp_fit"
