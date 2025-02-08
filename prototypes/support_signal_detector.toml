@@ -13,18 +13,15 @@ completion_events = [
 
 [listeners]
 events = [
-    "web_visitor_identified",
-    "meeting_logged"
+    "new_support_visit"
 ]
 
 [capabilities]
 types = [
-    "check_support_need"
     "apply_tag"
 ]
 
 [plays]
-"meeting_logged" = [
-    "check_support_need",
+"new_support_visit" = [
     "apply_tag"
 ]

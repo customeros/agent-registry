@@ -2,6 +2,7 @@
 version = "1.0"
 name = "Web visitor identifier"          
 type = "web_visitor_identifier"          
+scope = "workspace"
 icon = "radar"
 
 [goal]

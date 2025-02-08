@@ -2,29 +2,32 @@
 version = "1.0"
 name = "Meeting keeper"          
 type = "meeting_keeper"          
-goal = "capture_meeting_intelligence"
+scope = "personal"
 icon = "notebook-pen"
 
-[triggers]
-events = [
-    "meeting_recording.created"
+[goal]
+goal = "capture_external_meeting"
+completion_events = [
+    "meeting_logged"
 ]
 
-[[capabilities]]
-type = "detect_new_meeting_recording"        
+[listeners]
+events = [
+    "new_meeting_recording"
+]
 
-[capabilities.config_default]  
-notetaker = ""
+[capabilities]
+types = [
+    "extract_meeting_highlights",
+    "identify_meeting_participants",
+    "create_and_enrich_contacts",
+    "add_meeting_notes_to_timeline"
+]
 
-[[capabilities]]
-type = "extract_meeting_highlights"        
-
-[capabilities.config_default]  
-highlight_types = ["key_point", "decisions", "action_items", "follow_ups"]
-
-[[capabilities]]
-type = "identify_meeting_participants"        
-
-[[capabilities]]
-type = "create_markdown_timeline_event"        
-
+[plays]
+"new_meeting_recording" = [
+    "identify_meeting_participants",
+    "create_and_enrich_contacts",
+    "extract_meeting_highlights",
+    "add_meeting_notes_to_timeline"
+]
