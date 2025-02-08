@@ -21,7 +21,7 @@ types = [
     "extract_meeting_highlights",
     "identify_meeting_participants",
     "create_and_enrich_contacts",
-    "add_meeting_notes_to_timeline"
+    "add_meeting_notes_to_company"
 ]
 
 [plays]
@@ -29,5 +29,5 @@ types = [
     "identify_meeting_participants",
     "create_and_enrich_contacts",
     "extract_meeting_highlights",
-    "add_meeting_notes_to_timeline"
+    "add_meeting_notes_to_company"
 ]
