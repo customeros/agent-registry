@@ -2,6 +2,7 @@
 version = "1.0"
 name = "icp qualifier"          
 type = "icp_qualifier"          
+scope = "workspace"
 icon = "target-04"
 
 [goal]

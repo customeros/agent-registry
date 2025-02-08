@@ -2,6 +2,7 @@
 version = "1.0"
 name = "Cashflow Guardian"          
 type = "cashflow_guardian"          
+scope = "workspace"
 icon = "shield-dollar"
 
 [goal]

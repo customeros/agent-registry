@@ -2,6 +2,7 @@
 version = "1.0"
 name = "Campaign manager"          
 type = "campaign_manager"          
+scope = "personal"
 icon = ""
 
 [goal]

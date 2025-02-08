@@ -1,17 +1,44 @@
 [agent]
 version = "1.0"
-name = "LinkedIn networker"          
-type = "linkedin_networker"          
-goal = "grow_linkedin_audience"
+name = "LinkedIn connector"          
+type = "linkedin_connector"          
+scope = "personal"
 icon = ""
 
-[triggers]
-events = [
-    "contact.sent_to_agent.linkedin_networker"
+[goal]
+goal = "grow_linkedin_network"
+completion_events = [
+    "linkedin_connection_added",
+    "linkedin_connection_withdrawn"
 ]
 
-[[capabilities]]
-type = "sync_linkedin_connections"        
+[listeners]
+events = [
+    "connect_on_linkedin",
+    "connection_request_timed_out",
+    "new_linkedin_connection",
+]
+
+[capabilities]
+types = [
+    "send_linkedin_connection_request",
+    "withdraw_linkedin_connection_request"
+    "create_and_enrich_contact"
+]
+
+[plays]
+"connect_on_linkedin" = [
+    "send_linkedin_connection_request"
+]
+
+"connection_request_timed_out" = [
+    "withdraw_linkedin_connection_request"
+]
+
+"new_linkedin_connection" = [
+    "create_and_enrich_contact"
+]
+
 
 # [capabilities.config_default]  
 # browser_extension_enabled = false
