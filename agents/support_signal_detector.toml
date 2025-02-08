@@ -19,7 +19,7 @@ events = [
 
 [capabilities]
 types = [
-    "check_support_need"
+    "check_support_need",
     "apply_tag"
 ]
 
