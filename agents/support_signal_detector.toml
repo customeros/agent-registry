@@ -8,7 +8,7 @@ icon = "life-buoy-01"
 [goal]
 goal = "spot_help_needed"
 completion_events = [
-    "needs_help"
+    "company_needs_help"
 ]
 
 [listeners]
