@@ -8,7 +8,7 @@ icon = "radar"
 [goal]
 goal = "identify_web_visitor"
 completion_events = [
-    "web_visitor_identified",
+    "company_identified",
     "web_visitor_not_identified"
 ]
 
