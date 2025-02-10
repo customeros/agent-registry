@@ -20,11 +20,11 @@ events = [
 [capabilities]
 types = [
     "check_support_need",
-    "apply_tag"
+    "apply_tag_to_company"
 ]
 
 [plays]
 "meeting_logged" = [
     "check_support_need",
-    "apply_tag"
+    "apply_tag_to_company"
 ]
