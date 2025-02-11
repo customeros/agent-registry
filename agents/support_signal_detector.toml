@@ -14,7 +14,7 @@ completion_events = [
 [listeners]
 events = [
     "company_identified",
-    "new_meeting_recording"
+    "new_meeting_recording",
     "tag_company"
 ]
 
