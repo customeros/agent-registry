@@ -13,18 +13,27 @@ completion_events = [
 
 [listeners]
 events = [
-    "web_visitor_identified",
-    "meeting_logged"
+    "company_identified",
+    "new_meeting_recording"
+    "tag_company"
 ]
 
 [capabilities]
 types = [
-    "check_support_need",
+    "detect_support_webvisit",
+    "extract_support_signals_from_meeting",
     "apply_tag_to_company"
 ]
 
 [plays]
-"meeting_logged" = [
-    "check_support_need",
+"company_identified" = [
+    "detect_support_webvisit",
+]
+
+"new_meeting_recording" = [
+    "extract_support_signals_from_meeting",
+]
+
+"tag_company" = [
     "apply_tag_to_company"
 ]
