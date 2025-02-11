@@ -16,7 +16,8 @@ completion_events = [
 [listeners]
 events = [
     "contact_added_to_campaign",
-    "email_bounced"
+    "email_bounced",
+    "email_reply_received",
 ]
 
 [capabilities]
@@ -25,8 +26,8 @@ types = [
     "validate_email_deliverability",
     "manage_campaign_execution",
     "select_optimal_sending_mailbox",
-    "manage_email_delivery_failures",
-    "forward_email_replies"
+    "manage_email_delivery_failure",
+    "forward_email_reply"
 ]
 
 [plays]
@@ -35,9 +36,12 @@ types = [
     "validate_email_deliverability",
     "select_optimal_sending_mailbox",
     "manage_campaign_execution",
-    "forward_email_replies"
+]
+
+"email_reply_received" = [
+    "forward_email_reply"
 ]
 
 "email_bounced" = [
-    "manage_email_delivery_failures"
+    "manage_email_delivery_failure"
 ]
