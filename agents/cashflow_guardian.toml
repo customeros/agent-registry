@@ -16,71 +16,71 @@ completion_events = [
 events = [
     "start_invoice_run_with_autopayment",
     "start_invoice_run",
-    "send_invoice",
-    "invoice_paid",
-    "invoice_past_due",
-    "invoice_voided",
-    "payment_failed",
-    "payment_processing"
+#    "send_invoice",
+#    "invoice_paid",
+#    "invoice_past_due",
+#    "invoice_voided",
+#    "payment_failed",
+#    "payment_processing"
 ]
 
 [capabilities]
 types = [
     "generate_invoice", 
-    "send_invoice_via_email",
-    "process_autopayment",
-    "create_payment_link",
-    "send_paid_notification",
-    "send_past_due_notification",
-    "send_invoice_voided_notification",
-    "send_payment_failure_notification",
-    "sync_invoice_to_accounting_system",
-    "void_invoice",
-    "update_invoice_status",
-    "update_invoice_status_in_accounting_system"
+#    "send_invoice_via_email",
+#    "process_autopayment",
+#    "create_payment_link",
+#    "send_paid_notification",
+#    "send_past_due_notification",
+#    "send_invoice_voided_notification",
+#    "send_payment_failure_notification",
+#    "sync_invoice_to_accounting_system",
+#    "void_invoice",
+#    "update_invoice_status",
+#    "update_invoice_status_in_accounting_system"
 ]
 
 [plays]
 "start_invoice_run" = [
     "generate_invoice", 
-    "sync_invoice_to_accounting_system",
+#    "sync_invoice_to_accounting_system",
 ]
 
-"send_invoice" = [
-    "create_payment_link",
-    "send_invoice_via_email"
-]
+#"send_invoice" = [
+#    "create_payment_link",
+#    "send_invoice_via_email"
+#]
 
-"start_invoice_run_with_autopayment" = [
-    "generate_invoice", 
-    "sync_invoice_to_accounting_system",
-    "process_autopayment",
-]
+#"start_invoice_run_with_autopayment" = [
+#    "generate_invoice",
+#    "sync_invoice_to_accounting_system",
+#    "process_autopayment",
+#]
 
-"invoice_paid" = [
-    "send_paid_notification",
-    "update_invoice_status",
-    "update_invoice_status_in_accounting_system"
-]
+#"invoice_paid" = [
+#    "update_invoice_status",
+#    "send_paid_notification",
+#    "update_invoice_status_in_accounting_system"
+#]
+#
+#"invoice_past_due" = [
+#    "send_past_due_notification"
+#]
+#
+#"invoice_voided" = [
+#    "send_invoice_voided_notification",
+#    "update_invoice_status_in_accounting_system"
+#]
+#
+#"payment_failed" = [
+#    "send_payment_failure_notification"
+#]
+#
+#"payment_processing" = [
+#    "update_invoice_status"
+#]
 
-"invoice_past_due" = [
-    "send_past_due_notification"
-]
-
-"invoice_voided" = [
-    "send_invoice_voided_notification",
-    "update_invoice_status_in_accounting_system"
-]
-
-"payment_failed" = [
-    "send_payment_failure_notification"
-]
-
-"payment_processing" = [
-    "update_invoice_status"
-]
-
-
+################################################
 # [capabilities.generate_invoice_config]  
 # logo = ""
 # company_legal_name = ""
