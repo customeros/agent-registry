@@ -51,11 +51,11 @@ types = [
 #    "send_invoice_via_email"
 #]
 
-#"start_invoice_run_with_autopayment" = [
-#    "generate_invoice",
+"start_invoice_run_with_autopayment" = [
+    "generate_invoice",
 #    "sync_invoice_to_accounting_system",
 #    "process_autopayment",
-#]
+]
 
 #"invoice_paid" = [
 #    "update_invoice_status",
