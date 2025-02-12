@@ -1,0 +1,57 @@
+[agent]
+version = "1.0"
+name = "Email assistant"          
+type = "email_assistant"          
+scope = "personal"
+icon = ""
+
+[goal]
+goal = "engagement"            
+completion_events = [
+    "email_reply_received",
+    "email_reply_not_received",
+    "email_not_deliverable"
+]
+
+[listeners]
+events = [
+    "compose_email",
+    "send_email",
+    "email_bounced",
+    "no_reply",
+    "email_received"
+]
+
+[capabilities]
+types = [
+    "validate_email_deliverability",
+    "select_optimal_mailbox",
+    "suggest_optimal_sending_time",
+    "send_email",
+    "manage_email_delivery_failure",
+    "follow_up_reminder",
+    "send_inbox_notification"
+]
+
+[plays]
+"compose_email" = [
+    "validate_email_deliverability",
+    "select_optimal_mailbox",
+    "suggest_optimal_sending_time"
+]
+
+"send_email" = [
+    "send_email"
+]
+
+"email_received" = [
+    "send_inbox_notification"
+]
+
+"no_reply" = [
+    "follow_up_reminder"
+]
+
+"email_bounced" = [
+    "manage_email_delivery_failure"
+]

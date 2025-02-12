@@ -25,7 +25,7 @@ types = [
     "enrich_email_address",
     "validate_email_deliverability",
     "manage_campaign_execution",
-    "select_optimal_sending_mailbox",
+    "select_optimal_mailbox",
     "manage_email_delivery_failure",
     "forward_email_reply"
 ]
