@@ -1,0 +1,40 @@
+[agent]
+version = "1.0"
+name = "Email Keeper"          
+type = "email_keeper"          
+scope = "personal"
+icon = "mail-02"
+
+[goal]
+goal = "capture_commercial_email_conversations"
+completion_events = [
+    "synced_email_thread",
+    "thread_ignored",  
+]
+
+[listeners]
+events = [
+    "new_email",
+]
+
+[capabilities]
+types = [
+    "classify_email_thread", 
+    "identify_conversation_participants",
+    "create_and_enrich_contacts",
+    "summarize_message",
+    "summarize_thread",
+    "sync_email_thread",
+    "sync_attachments"
+]
+
+[plays]
+"new_email_thread" = [
+    "classify_email_thread", 
+    "identify_conversation_participants",
+    "create_and_enrich_contacts",
+    "summarize_message",
+    "summarize_thread",
+    "sync_email_thread",
+    "sync_attachments"
+]
