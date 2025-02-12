@@ -22,7 +22,8 @@ events = [
 types = [
     "detect_support_webvisit",
     "extract_support_signals_from_meeting",
-    "apply_tag_to_company"
+    "apply_tag_to_company",
+    "log_requests_for_help"
 ]
 
 [plays]
@@ -32,6 +33,7 @@ types = [
 
 "new_meeting_recording" = [
     "extract_support_signals_from_meeting",
+    "log_requests_for_help"
 ]
 
 "company_needs_help" = [

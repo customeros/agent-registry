@@ -3,7 +3,7 @@ version = "1.0"
 name = "Meeting keeper"          
 type = "meeting_keeper"          
 scope = "personal"
-icon = "notebook-pen"
+icon = "edit-03"
 
 [goal]
 goal = "capture_external_meeting"

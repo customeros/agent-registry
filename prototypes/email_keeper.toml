@@ -15,6 +15,7 @@ completion_events = [
 [listeners]
 events = [
     "new_email",
+    "email_bounced"
 ]
 
 [capabilities]
@@ -25,7 +26,7 @@ types = [
     "summarize_message",
     "summarize_thread",
     "sync_email_thread",
-    "sync_attachments"
+    "manage_email_delivery_failure",
 ]
 
 [plays]
@@ -36,5 +37,8 @@ types = [
     "summarize_message",
     "summarize_thread",
     "sync_email_thread",
-    "sync_attachments"
+]
+
+"email_bounced" = [
+    "manage_email_delivery_failure"
 ]
