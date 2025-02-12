@@ -3,7 +3,7 @@ version = "1.0"
 name = "Email Keeper"          
 type = "email_keeper"          
 scope = "personal"
-icon = "mail-02"
+icon = "mail-01"
 
 [goal]
 goal = "capture_commercial_email_conversations"
