@@ -16,7 +16,7 @@ completion_events = [
 events = [
     "start_invoice_run_with_autopayment",
     "start_invoice_run",
-#    "send_invoice",
+    "send_invoice",
 #    "invoice_paid",
 #    "invoice_past_due",
 #    "invoice_voided",
@@ -46,10 +46,10 @@ types = [
 #    "sync_invoice_to_accounting_system",
 ]
 
-#"send_invoice" = [
+"send_invoice" = [
 #    "create_payment_link",
 #    "send_invoice_via_email"
-#]
+]
 
 "start_invoice_run_with_autopayment" = [
     "generate_invoice",
