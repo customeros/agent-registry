@@ -1,7 +1,7 @@
 [agent]
 version = "1.0"
-name = "Cashflow Guardian"          
-type = "cashflow_guardian"          
+name = "Cashflow Guardian"
+type = "cashflow_guardian"
 scope = "workspace"
 icon = "shield-dollar"
 
@@ -26,7 +26,7 @@ events = [
 
 [capabilities]
 types = [
-    "generate_invoice", 
+    "generate_invoice",
     "process_autopayment",
 #    "send_invoice_via_email",
 #    "create_payment_link",
@@ -42,7 +42,7 @@ types = [
 
 [plays]
 "start_invoice_run" = [
-    "generate_invoice", 
+    "generate_invoice",
 #    "sync_invoice_to_accounting_system",
 ]
 
@@ -80,7 +80,7 @@ types = [
 #]
 
 ################################################
-# [capabilities.generate_invoice_config]  
+# [capabilities.generate_invoice_config]
 # logo = ""
 # company_legal_name = ""
 # base_currency = ""
@@ -91,15 +91,14 @@ types = [
 # webhook_url = ""
 
 
-# [capabilities.send_invoice_config]  
+# [capabilities.send_invoice_config]
 # from_email_address = ""
 # bcc_email_address = ""
 # email_message = ""
 
 
-# [capabilities.process_autopayment_config]  
+# [capabilities.process_autopayment_config]
 # payment_provider = "stripe"
 
-# [capabilities.sync_with_accounting_system]  
+# [capabilities.sync_with_accounting_system]
 # accounting_system = "quickbooks"
-
