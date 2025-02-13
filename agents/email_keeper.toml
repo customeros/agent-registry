@@ -8,8 +8,8 @@ icon = "mail-02"
 [goal]
 goal = "capture_commercial_email_conversations"
 completion_events = [
-    "synced_email_thread",
-    "thread_ignored",
+    "ingest_email",
+    "ignore_email",
 ]
 
 [listeners]
@@ -19,20 +19,20 @@ events = [
 
 [capabilities]
 types = [
-    "classify_email_thread",
-    "identify_conversation_participants",
+    "classify_email",
+    "identify_participants",
     "create_and_enrich_contacts",
-#    "summarize_message",
-#    "summarize_thread",
+    "summarize_message",
+    "summarize_thread",
     "sync_email_thread"
 ]
 
 [plays]
 "new_email" = [
-    "classify_email_thread",
-    "identify_conversation_participants",
+    "classify_email",
+    "identify_participants",
     "create_and_enrich_contacts",
-#    "summarize_message",
-#    "summarize_thread",
-    "sync_email_thread"
+    "summarize_message",
+    "summarize_thread",
+    "ingest_email"
 ]
