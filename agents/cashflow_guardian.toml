@@ -29,7 +29,7 @@ types = [
     "generate_invoice",
     "process_autopayment",
 #    "send_invoice_via_email",
-#    "create_payment_link",
+    "create_payment_link",
 #    "send_paid_notification",
 #    "send_past_due_notification",
 #    "send_invoice_voided_notification",
@@ -47,7 +47,7 @@ types = [
 ]
 
 "send_invoice" = [
-#    "create_payment_link",
+    "create_payment_link",
 #    "send_invoice_via_email"
 ]
 
