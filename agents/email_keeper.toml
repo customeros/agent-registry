@@ -28,7 +28,7 @@ types = [
 ]
 
 [plays]
-"new_email_thread" = [
+"new_email" = [
     "classify_email_thread",
     "identify_conversation_participants",
     "create_and_enrich_contacts",
