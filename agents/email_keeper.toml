@@ -21,17 +21,15 @@ events = [
 types = [
     "classify_email",
     "identify_participants",
-    "create_and_enrich_contacts",
     "summarize_message",
     "summarize_thread",
-    "sync_email_thread"
+    "ingest_email"
 ]
 
 [plays]
 "new_email" = [
     "classify_email",
     "identify_participants",
-    "create_and_enrich_contacts",
     "summarize_message",
     "summarize_thread",
     "ingest_email"
