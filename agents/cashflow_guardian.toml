@@ -27,8 +27,8 @@ events = [
 [capabilities]
 types = [
     "generate_invoice", 
+    "process_autopayment",
 #    "send_invoice_via_email",
-#    "process_autopayment",
 #    "create_payment_link",
 #    "send_paid_notification",
 #    "send_past_due_notification",
@@ -53,12 +53,11 @@ types = [
 
 "start_invoice_run_with_autopayment" = [
     "generate_invoice",
+    "process_autopayment"
 #    "sync_invoice_to_accounting_system",
-#    "process_autopayment",
 ]
 
 #"invoice_paid" = [
-#    "update_invoice_status",
 #    "send_paid_notification",
 #    "update_invoice_status_in_accounting_system"
 #]
