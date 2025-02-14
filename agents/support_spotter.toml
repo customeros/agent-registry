@@ -1,12 +1,13 @@
 [agent]
 version = "1.0"
-name = "Support spotter"          
+name = "Support Spotter"          
+description = "Support Spotter identifies companies that need help by proactively monitoring customer interactions and meetings. It automatically detects support signals and alerts your team when help is needed."
 type = "support_spotter"          
 scope = "workspace"
 icon = "life-buoy-01"
 
 [goal]
-goal = "spot_help_needed"
+goal = "Flag companies that may need your help"
 completion_events = [
     "help_spotted"
 ]

@@ -1,12 +1,13 @@
 [agent]
 version = "1.0"
-name = "ICP qualifier"
+name = "ICP Qualifier"
+description = "ICP Qualifier accurately evaluates new leads against your Ideal Customer Profile. It automatically researches a company and determines if they are the right fit for your business."
 type = "icp_qualifier"          
 scope = "workspace"
 icon = "target-04"
 
 [goal]
-goal = "evaluate_icp_fit"
+goal = "Evaluate if a company fits your Ideal Customer Profile"
 completion_events = [
     "icp_fit",
     "icp_not_a_fit"

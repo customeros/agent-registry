@@ -6,7 +6,7 @@ scope = "workspace"
 icon = "shield-dollar"
 
 [goal]
-goal = "get_paid"
+goal = "Get you paid"
 completion_events = [
     "invoice_paid",
     "invoice_voided"

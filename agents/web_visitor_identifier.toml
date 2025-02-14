@@ -1,12 +1,13 @@
 [agent]
 version = "1.0"
-name = "Web visitor identifier"          
+name = "Web Visitor Identifier"          
+description = "Web Visitor Identifier reveals the companies visiting your website in real-time. It automatically analyzes visitor behavior and notifies your team about potential leads."
 type = "web_visitor_identifier"          
 scope = "workspace"
 icon = "radar"
 
 [goal]
-goal = "identify_web_visitor"
+goal = "Identify leads that visit your website"
 completion_events = [
     "company_identified",
     "web_visitor_not_identified"

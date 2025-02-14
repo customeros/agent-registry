@@ -1,12 +1,13 @@
 [agent]
 version = "1.0"
-name = "Meeting keeper"          
+name = "Meeting Keeper"          
+description = "Meeting Keeper automatically captures and summarizes your external meetings with customers and prospects. It identifies participants, extracts key highlights, and shares the important details with your team."
 type = "meeting_keeper"          
 scope = "personal"
 icon = "edit-03"
 
 [goal]
-goal = "capture_external_meeting"
+goal = "Capture and share external meetings with your team"
 completion_events = [
     "meeting_logged"
 ]
