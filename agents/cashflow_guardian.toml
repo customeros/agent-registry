@@ -35,8 +35,6 @@ types = [
     "send_invoice_voided_notification",
 #    "send_payment_failure_notification",
 #    "sync_invoice_to_accounting_system",
-#    "void_invoice",
-#    "update_invoice_status",
 #    "update_invoice_status_in_accounting_system"
 ]
 
