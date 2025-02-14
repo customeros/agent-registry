@@ -17,9 +17,9 @@ events = [
     "start_invoice_run_with_autopayment",
     "start_invoice_run",
     "send_invoice",
-#    "invoice_paid",
+    "invoice_paid",
 #    "invoice_past_due",
-#    "invoice_voided",
+    "invoice_voided",
 #    "payment_failed",
 #    "payment_processing"
 ]
@@ -30,9 +30,9 @@ types = [
     "process_autopayment",
     "send_invoice_via_email",
     "create_payment_link",
-#    "send_paid_notification",
+    "send_paid_notification",
 #    "send_past_due_notification",
-#    "send_invoice_voided_notification",
+    "send_invoice_voided_notification",
 #    "send_payment_failure_notification",
 #    "sync_invoice_to_accounting_system",
 #    "void_invoice",
@@ -57,24 +57,24 @@ types = [
 #    "sync_invoice_to_accounting_system",
 ]
 
-#"invoice_paid" = [
-#    "send_paid_notification",
+"invoice_paid" = [
+    "send_paid_notification",
 #    "update_invoice_status_in_accounting_system"
-#]
-#
+]
+
 #"invoice_past_due" = [
 #    "send_past_due_notification"
 #]
-#
-#"invoice_voided" = [
-#    "send_invoice_voided_notification",
+
+"invoice_voided" = [
+    "send_invoice_voided_notification",
 #    "update_invoice_status_in_accounting_system"
-#]
-#
+]
+
 #"payment_failed" = [
 #    "send_payment_failure_notification"
 #]
-#
+
 #"payment_processing" = [
 #    "update_invoice_status"
 #]
