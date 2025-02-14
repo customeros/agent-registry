@@ -1,6 +1,7 @@
 [agent]
 version = "1.0"
 name = "Cashflow Guardian"
+Description = "Cashflow Guardian helps you get paid on time, every time.  It automates your entire billing process from invoice creation to revenue recognition."
 type = "cashflow_guardian"
 scope = "workspace"
 icon = "shield-dollar"
