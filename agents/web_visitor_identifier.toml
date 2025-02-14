@@ -8,6 +8,7 @@ icon = "radar"
 
 [goal]
 goal = "Identify leads that visit your website"
+metric = "{count} visitors identified in the past 30 days"
 completion_events = [
     "company_identified",
     "web_visitor_not_identified"

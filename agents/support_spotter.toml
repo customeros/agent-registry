@@ -8,6 +8,7 @@ icon = "life-buoy-01"
 
 [goal]
 goal = "Flag companies that may need your help"
+metric = "{count} support opportunities spotted in the past 30 days"
 completion_events = [
     "help_spotted"
 ]

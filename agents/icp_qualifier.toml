@@ -8,6 +8,7 @@ icon = "target-04"
 
 [goal]
 goal = "Evaluate if a company fits your Ideal Customer Profile"
+metric = "{count} leads qualified in the past 30 days"
 completion_events = [
     "icp_fit",
     "icp_not_a_fit"

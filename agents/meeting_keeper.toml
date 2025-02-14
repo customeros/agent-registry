@@ -8,6 +8,7 @@ icon = "edit-03"
 
 [goal]
 goal = "Capture and share external meetings with your team"
+metric = "{count} meetings shared in the past 30 days"
 completion_events = [
     "meeting_logged"
 ]

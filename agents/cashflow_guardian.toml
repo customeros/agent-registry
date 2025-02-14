@@ -8,6 +8,7 @@ icon = "shield-dollar"
 
 [goal]
 goal = "Get you paid"
+metric = "{currencySymbol}{amount} cash collected in the past 30 days"
 completion_events = [
     "invoice_paid",
     "invoice_voided"
