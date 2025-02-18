@@ -1,7 +1,7 @@
 [agent]
 version = "1.0"
 name = "Cashflow Guardian"
-Description = "Cashflow Guardian helps you get paid on time, every time.  It automates your entire billing process from invoice creation to revenue recognition."
+description = "Cashflow Guardian helps you get paid on time, every time.  It automates your entire billing process from invoice creation to revenue recognition."
 type = "cashflow_guardian"
 scope = "workspace"
 icon = "shield-dollar"
@@ -23,7 +23,6 @@ events = [
     "invoice_past_due",
     "invoice_voided",
 #    "payment_failed",
-#    "payment_processing"
 ]
 
 [capabilities]
@@ -31,7 +30,6 @@ types = [
     "generate_invoice",
     "process_autopayment",
     "send_invoice_via_email",
-    "create_payment_link",
     "send_paid_notification",
     "send_past_due_notification",
     "send_invoice_voided_notification",
@@ -47,7 +45,6 @@ types = [
 ]
 
 "send_invoice" = [
-    "create_payment_link",
     "send_invoice_via_email"
 ]
 
@@ -74,31 +71,3 @@ types = [
 #"payment_failed" = [
 #    "send_payment_failure_notification"
 #]
-
-#"payment_processing" = [
-#    "update_invoice_status"
-#]
-
-################################################
-# [capabilities.generate_invoice_config]
-# logo = ""
-# company_legal_name = ""
-# base_currency = ""
-# billing_address = ""
-# vat_number = ""
-# invoice_numbering = "random"
-# bank_account_details = ""
-# webhook_url = ""
-
-
-# [capabilities.send_invoice_config]
-# from_email_address = ""
-# bcc_email_address = ""
-# email_message = ""
-
-
-# [capabilities.process_autopayment_config]
-# payment_provider = "stripe"
-
-# [capabilities.sync_with_accounting_system]
-# accounting_system = "quickbooks"
