@@ -55,7 +55,7 @@ types = [
 
 "invoice_paid" = [
     "send_paid_notification",
-    "update_invoice_status_in_accounting_system"
+    "sync_invoice_to_accounting_system"
 ]
 
 "invoice_past_due" = [
@@ -64,7 +64,7 @@ types = [
 
 "invoice_voided" = [
     "send_invoice_voided_notification",
-    "update_invoice_status_in_accounting_system"
+    "sync_invoice_to_accounting_system"
 ]
 
 #"payment_failed" = [
