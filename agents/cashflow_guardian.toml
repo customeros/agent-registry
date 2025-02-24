@@ -5,6 +5,7 @@ description = "Cashflow Guardian helps you get paid on time, every time.  It aut
 type = "cashflow_guardian"
 scope = "workspace"
 icon = "shield-dollar"
+unique = true
 
 [goal]
 goal = "Get you paid"

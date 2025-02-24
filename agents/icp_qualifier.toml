@@ -5,6 +5,7 @@ description = "ICP Qualifier accurately evaluates new leads against your Ideal C
 type = "icp_qualifier"          
 scope = "workspace"
 icon = "target-04"
+unique = true
 
 [goal]
 goal = "Evaluate if a company fits your Ideal Customer Profile"
