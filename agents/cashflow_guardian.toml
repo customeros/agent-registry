@@ -50,8 +50,8 @@ types = [
 
 "start_invoice_run_with_autopayment" = [
     "generate_invoice",
-    "sync_invoice_to_accounting_system",
-    "process_autopayment"
+    "process_autopayment",
+    "sync_invoice_to_accounting_system"
 ]
 
 "invoice_paid" = [
