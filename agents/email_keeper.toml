@@ -7,7 +7,7 @@ scope = "personal"
 icon = "mail-01"
 
 [goal]
-goal = "capture_commercial_email_conversations"
+goal = "Capture and summarize email conversations"
 metric = "{count} commercial email conversations captured in the past 30 days"
 completion_events = [
     "ingest_email",
